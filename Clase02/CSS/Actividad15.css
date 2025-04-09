@@ -1,0 +1,15 @@
+a:link {
+	color : red;	
+}
+
+a:active{
+	color:yellowgreen;
+}
+
+a:hover{
+	color : green;
+}
+
+a:visited{
+	color:black;
+}/*Solo cuando no tiene target la etiqueta <a>*/

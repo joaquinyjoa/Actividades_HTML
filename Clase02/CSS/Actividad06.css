@@ -1,0 +1,43 @@
+h1{
+    text-align: center;
+    font-size: 40px;
+    font-family: Arial;
+}
+
+h2, h3{
+    font-family: Arial;
+}
+
+div{
+    text-align: center;
+    background-color: red;
+    margin: 0 auto;    /* lo centra horizontalmente */
+    width: 300px;  
+    height: 125px;
+    border-radius: 10px; /* esquinas redondeadas (opcional) */
+}
+
+ol{
+    margin-right: 55px;
+    list-style-position: inside;
+}
+
+.instagram{
+    background-color: fuchsia;
+    width: 500px;    
+}
+
+.tiktok{
+    background-color: #25F4EE;  /* turquesa brillante */
+    width: 500px;    
+}
+
+.whatsapp{
+    background-color: #25D366;  /* verde WhatsApp */    
+    width: 500px;    
+}
+
+p{
+    font-size: 15px;
+    font-family: Tahoma, Geneva, sans-serif;
+}
