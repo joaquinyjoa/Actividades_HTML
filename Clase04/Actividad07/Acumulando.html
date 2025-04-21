@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>[D.06]</title>
+    <script src="../Actividad05/jotasones.js"></script>
+    <script>
+        function serializarJotasones(array = [])
+        {
+            return JSON.stringify(array);
+        }
+
+        function deserializarJotasones(jsonString) 
+        {
+            return JSON.parse(jsonString);
+        }
+
+        if (localStorage.getItem("jotasones") === null)
+        {
+            localStorage.setItem("jotasones", serializarJotasones(jotasones));//establece un item nuevo  
+            alert("Se cargo");
+            console.log(localStorage.getItem("jotasones"));
+        }
+        else
+        {
+            alert("Los datos estaban cargados");
+
+            if (confirm("Desea reiniciar el contenido?") == true)
+            {
+                localStorage.setItem("jotasones", serializarJotasones(jotasones))
+                console.log(localStorage.getItem("jotasones"));
+            }
+            else 
+            {
+                console.log(localStorage.getItem("jotasones"));
+                let jotasonesSinJson = deserializarJotasones(localStorage.getItem("jotasones"));
+                let i = jotasonesSinJson.length - 1;
+                const obj = {};
+                obj.id = jotasonesSinJson[i].id + 1;
+                obj.valor_1 = jotasonesSinJson[i].valor_1 + 1;
+                obj.valor_2 = jotasonesSinJson[i].valor_2 + 1;
+                jotasonesSinJson.push(obj);
+                localStorage.setItem("jotasones", serializarJotasones(jotasonesSinJson));
+                console.log(localStorage.getItem("jotasones"));
+
+                let idIngresado = prompt("Ingrese id para eliminar:");
+                const entero = parseInt(idIngresado);
+
+                if (idIngresado !== null && !isNaN(entero))
+                {
+                    jotasonesSinJson.forEach((j, index) =>
+                    {
+                        if (entero === j.id)
+                        {
+                            jotasonesSinJson.splice(index, 1);
+                            localStorage.setItem("jotasones", serializarJotasones(jotasonesSinJson));
+                            alert(`Id eliminado: ${j.id}`);
+                            console.log(`Id eliminado: ${j.id}`);
+                        }    
+                    });
+                }
+                else
+                {
+                    alert("El id ingresado no es válido.");
+                    console.log("El id ingresado no es válido.");
+                }
+                console.log(localStorage.getItem("jotasones"));
+            }     
+
+        }
+
+        
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

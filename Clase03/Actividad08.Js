@@ -9,7 +9,7 @@ crearArray(1, 2, 3, 4); // [1, 2, 3, 4]
 function crearArray(...numeros)
 {
     let array = [];
-    for (let i = 0; i <= numeros; i++)
+    for (let i = 1; i <= numeros.length; i++)
     {    
         array.push(i);
     }    

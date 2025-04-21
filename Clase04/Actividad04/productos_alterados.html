@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>D.04</title>
+    <script src="../Actividad02/productos.js"></script>
+    <script type="text/javascript">
+
+        productosSinJson.forEach(p => 
+        {
+            if (p.precio % 2 == 0)
+            {
+                delete p.fechaDeVencimiento;
+            }
+
+            if (p.precio % 2 !== 0)
+            {
+                p.moneda = "USD";
+            }
+
+            if (p.moneda == undefined)
+            {
+                console.log(`
+            Código de barra:        ${p.codigoDeBarra}
+            Nombre:                 ${p.nombre}
+            Precio:                 $${p.precio}
+            `);
+            }
+            else if ("fechaDeVencimiento" in p)
+            {
+                console.log(`
+            Código de barra:        ${p.codigoDeBarra}
+            Nombre:                 ${p.nombre}
+            Precio:                 $${p.precio}
+            Fecha de vencimiento:   ${p.fechaDeVencimiento}
+            Moneda:                 ${p.moneda}
+            `);
+            }
+        
+        });
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

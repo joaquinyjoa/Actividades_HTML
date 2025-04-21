@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>[D.05]</title>
+    <script src="./jotasones.js"></script>
+    <script>
+        function serializarJotasones(array = [])
+        {
+            return JSON.stringify(array);
+        }
+
+        function deserializarJotasones(jsonString) 
+        {
+            return JSON.parse(jsonString);
+        }
+
+        if (localStorage.getItem("jotasones") === null)
+        {
+            localStorage.setItem("jotasones", serializarJotasones(jotasones))//establece un item nuevo  
+            alert("Se cargo");
+            console.log(localStorage.setItem("jotasones", serializarJotasones(jotasones)));
+        }
+        else
+        {
+            alert("No se cargo");
+        }
+
+        
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
