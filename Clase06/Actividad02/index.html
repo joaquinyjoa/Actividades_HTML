@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enviar POST a API</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Vincula el archivo CSS -->
+</head>
+<body>
+    <h1>Formulario de Envío POST</h1>
+    
+    <form id="formulario" action="" method="POST">
+        <label for="nombre">Nombre:</label>
+        <input type="text" name="nombre" id="nombre" required><br><br>
+        
+        <label for="trabajo">Trabajo:</label>
+        <input type="text" name="trabajo" id="trabajo" required><br><br>
+        
+        <input type="submit" value="Enviar">
+    </form>
+
+    <div id="respuesta"></div> <!-- Aquí se mostrará la respuesta -->
+
+    <script src="script.js"></script> <!-- Vincula el archivo JS -->
+</body>
+</html>

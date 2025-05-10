@@ -1,0 +1,29 @@
+#btnGenerarTabla {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: blue;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+  }
+
+.centrado {
+    text-align: center;
+    margin-top: 20px; /* opcional: separación arriba */
+}
+
+#usuarios table {
+  margin: 20px auto;
+  border: 2px solid black;        /* Borde exterior */
+  border-collapse: collapse;      /* Unir bordes */
+  width: 80%;                     /* Opcional: ajustar tamaño */
+}
+
+#usuarios table, 
+#usuarios table th, 
+#usuarios table td {
+  border: 1px solid red;         /* Bordes internos de la tabla y celdas */
+  padding: 15px;                   /* Espaciado dentro de las celdas */
+  text-align: center;             /* Centrado de texto en celdas */
+}

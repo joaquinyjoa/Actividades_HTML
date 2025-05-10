@@ -1,0 +1,11 @@
+form {
+    width: 230px;
+    margin: auto auto auto 500px;  /* Esto centra el formulario en la página */
+    background-color: bisque;
+    padding: 20px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column; /* Hace que los elementos del formulario estén en columna */
+    align-items: center; /* Centra los elementos dentro del formulario */
+}
+
