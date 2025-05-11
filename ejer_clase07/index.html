@@ -16,7 +16,27 @@
 
 </head>
 <body>
+    <div id="contenedor">
         <div id="listado"></div>
+        <!-- enctype="multipart/form-data" es obligatorio cuando mandamos un archivo -->
+        <form id="formulario" enctype="multipart/form-data">
+            <label for="nombre" >Nombre:</label>
+            <input type="text" name="nombre" id="nombre" required><br><br>
+            
+            <label for="Apellido">Apellido:</label>
+            <input type="text" name="apellido" id="apellido" required><br><br>
 
+            <label for="email">Correo electronico:</label>
+            <input type="text" name="email" id="email" required><br><br>
+            
+            <label for="fotoUsuario">Avatar:</label>
+            <img id="avatar" src="./img/utnLogo.png" alt="Avatar" width="75" height="75">
+        </form>
+        
+    </div>
+    <div id="botones">
+        <button type="button" id="avanzar" class="siguiente">Avanzar</button>
+        <button type="button" id="retroceder" class="anterior">Retroceder</button>
+    </div>
 </body>
 </html>

@@ -12,13 +12,47 @@ body {
 
 input[type="text"], select{
   width:95%;
-  background:#fff;
+  background:#f7f4f4;
   margin-bottom:4%;
   border:1px solid #ccc;
   padding:4%;
   font-family:'Open Sans',sans-serif;
   font-size:95%;
-  color:#555;
+  color:#070707;
+}
+
+#contenedor {
+  display: flex;
+  justify-content: center;/* Centra horizontalmente el contenido */
+  align-items: flex-start; /* Alinea arriba ambos elementos */
+  gap: 40px; /* Espacio entre el listado y el formulario */
+  padding: 20px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  padding: 3rem;
+  background-color: #ff0000;
+  border-radius: 8px;
+  max-width: 350px;
+}
+
+form input {
+  font-family: 'Courier New', Courier, monospace;
+  color: rgb(100, 30, 30);
+  padding: 0.5rem;
+  font-size: 1rem;
+  border: 1px solid #f8f5f5;
+  border-radius: 4px;
+}
+
+form img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-top: 10px ;
 }
 
 table {
@@ -42,3 +76,48 @@ img {
   height: 75px;
 }
 
+#botones {
+  display: flex;
+  justify-content: center;/* Centra horizontalmente el contenido */
+  align-items: flex-start; /* Alinea arriba ambos elementos */
+  gap: 40px; /* Espacio entre el listado y el formulario */
+  padding: 20px;
+}
+
+button {
+  border-radius: 10px;
+  height: 20%;
+  margin: 10px; /* Espacio hacia afuera del botón */
+  padding: 8px 16px;  /* Espacio interno (contenido) del botón */
+  cursor: pointer;
+}
+
+.siguiente:hover {
+  background-color: dimgrey;
+}
+
+.siguiente {
+  background-color: rgb(54, 122, 52);
+}
+
+.anterior:hover {
+  background-color: rgb(211, 16, 16);
+}
+
+.anterior {
+  background-color: rgb(34, 204, 62);
+}
+
+a {
+  color: rgb(0, 0, 0); /* Color de la letra cuando el enlace está en su estado normal */
+  background-color: #007BFF;
+  padding: 5px 10px;
+  border-radius: 4px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+a:hover {
+  color: yellow; /* Cambia el color cuando se pasa el mouse por encima */
+  text-decoration: underline; /* Opcional, subraya el enlace cuando el mouse está sobre él */
+}
